@@ -11,7 +11,7 @@ using data visualization to explore the relationships between variables and thre
 
 ├── data \
 │ ├── iris.data \
-│ ├── data_clean.rds \
+│ ├── data_clean.rds
 
 ├── code \
 │ ├── 00_clean_data.R \
