@@ -45,6 +45,7 @@ Run each code file step by step: \
 Or, just run the following commands in terminal:
 ```bash
 make clean
+make install #synchronize the packages to your repo
 make iris_report.html
 ```
 \
