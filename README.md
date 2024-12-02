@@ -45,11 +45,17 @@ Run each code file step by step: \
 Or, just run the following commands in terminal:
 ```bash
 make clean
-make install #synchronize the packages to your repo
+make install #restore the package environment for this project
 make iris_report.html
 ```
-\
 
+\
+If add/delete/update any package, run following code to synchronize the renv library and renv.lock:
+```r
+renv::snapshot()
+```
+
+\
 The code file that creates the table: code/01_make_table.R \
 The code file that creates the figure: code/02_make_boxplot.R
 

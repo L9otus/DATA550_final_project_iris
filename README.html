@@ -402,11 +402,14 @@ produce a html report.</li>
 </p>
 <p>Or, just run the following commands in terminal:</p>
 <pre class="bash"><code>make clean
-make install #synchronize the packages to your repo
+make install #restore the package environment for this project
 make iris_report.html</code></pre>
 <p><br />
-</p>
-<p>The code file that creates the table: code/01_make_table.R<br />
+If add/delete/update any package, run following code to synchronize the
+renv library and renv.lock:</p>
+<pre class="r"><code>renv::snapshot()</code></pre>
+<p><br />
+The code file that creates the table: code/01_make_table.R<br />
 The code file that creates the figure: code/02_make_boxplot.R</p>
 </div>
 <div id="contents-of-the-report" class="section level2">
