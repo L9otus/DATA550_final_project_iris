@@ -17,6 +17,12 @@ iris_report.html: code/03_render_report.R iris_report.Rmd \
 
 
 
+# install rule
+.PHONY: install
+install:
+	Rscript -e "renv::restore(prompt=FALSE)"
+
+
 # Clean	rule
 .PHONY: clean
 clean:
