@@ -9,7 +9,7 @@ output/table.rds: data/data_clean.rds code/01_make_table.R
 	Rscript code/01_make_table.R
 
 ## 02.build the output of code/02_make_boxplot.R
-output/boxplot_sepal_length.png output/boxplot_sepal_length.png &: data/data_clean.rds code/02_make_boxplot.R
+output/boxplot_sepal_length.png output/boxplot_sepal_width.png &: data/data_clean.rds code/02_make_boxplot.R
 	Rscript code/02_make_boxplot.R
 	
 ## 03.render the report
@@ -22,7 +22,7 @@ iris_report.html: iris_report.Rmd code/03_render_report.R \
 install:
 	Rscript -e "renv::restore(prompt=FALSE)"
 
-## clean	rule
+## clean rule
 .PHONY: clean
 clean:
 	rm -f output/* && \

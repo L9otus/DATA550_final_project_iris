@@ -1,12 +1,10 @@
 # DATA550 - Final project
 
-#FROM rocker/4-ver:4.4.1
 FROM rocker/rstudio:4.4.1
 
 RUN apt-get update && apt-get install -y \
   pandoc 
   
-
 
 RUN mkdir /project
 WORKDIR /project
@@ -30,7 +28,7 @@ COPY renv/settings.json renv
 RUN Rscript -e "renv::restore(prompt = FALSE)"
 
 
-RUN mkdir report
+RUN mkdir -p report
 
 
-CMD make && mv iris_report.html report
+CMD make iris_report.html && mv iris_report.html report
