@@ -31,18 +31,35 @@ using data visualization to explore the relationships between variables and thre
 ├── iris_report.html
 
 
+
+
+
+
+
+
+
+## Project Image       没写完！
+
+
+DockerHub: ........................
+
+To download the image:
+
+```bash
+docker pull l9otus/...........
+```
+###### 没写完！
+
+
+
+
+
+
+
+
 ## How to Generate the Final Report
-Run each code file step by step: \
 
- - Run the clean rule first.
- - Use code/00_clean_data.R to clean the data, store the outcome in output folder.
- - Use code/01_make_table.R to create the table, store the outcome in output folder.
- - Use code/02_make_boxplot.R to create two boxplots, store the outcome in output folder.
- - Use code/03_render_report.R to render the iris_report.Rmd and produce a html report.
-
-\
-
-Or, just run the following commands in terminal:
+Run the following commands in terminal:
 ```bash
 make clean
 make install #restore the package environment for this project
