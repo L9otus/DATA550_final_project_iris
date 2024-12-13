@@ -25,6 +25,7 @@ using data visualization to explore the relationships between variables and thre
 │ ├── boxplot_sepal_width.png
 
 ├── Makefile \
+├── Dockerfile \
 ├── README.md \
 ├── README.html \
 ├── iris_report.Rmd \
@@ -56,7 +57,6 @@ docker run -v /"$(pwd)/report":/project/report data550_final_image
 ## How to Generate the Final Report
 Run the following in terminal:
 ```bash
-docker pull l9otus/data550_final_image
 make report/iris_report.html
 ```
 
