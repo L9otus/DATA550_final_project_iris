@@ -33,37 +33,31 @@ using data visualization to explore the relationships between variables and thre
 
 
 
-
-
-
-
-
-## Project Image       没写完！
-
-
-DockerHub: ........................
-
-To download the image:
-
+## How to Download the Docker Image
 ```bash
-docker pull l9otus/...........
+docker pull l9otus/data550_final_image
 ```
-###### 没写完！
+
+Link to the image on DockerHub: \
+https://hub.docker.com/repository/docker/l9otus/data550_final_image/general
 
 
+## How to Build the Docker Image
+```bash
+docker build -t l9otus/data550_final_image .
+```
 
-
-
-
+## How to Run the Docker Image
+```bash
+docker run -v /"$(pwd)/report":/project/report data550_final_image
+```
 
 
 ## How to Generate the Final Report
-
-Run the following commands in terminal:
+Run the following in terminal:
 ```bash
-make clean
-make install #restore the package environment for this project
-make iris_report.html
+docker pull l9otus/data550_final_image
+make report/iris_report.html
 ```
 
 \

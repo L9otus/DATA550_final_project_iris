@@ -1,5 +1,3 @@
-# DATA550 - Final project
-
 FROM rocker/rstudio:4.4.1
 
 RUN apt-get update && apt-get install -y \

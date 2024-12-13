@@ -383,27 +383,24 @@ three iris species.</p>
 ├── iris_report.Rmd<br />
 ├── iris_report.html</p>
 </div>
+<div id="how-to-download-the-docker-image" class="section level2">
+<h2>How to Download the Docker Image</h2>
+<pre class="bash"><code>docker pull l9otus/data550_final_image</code></pre>
+<p>Link to the image on DockerHub:<br />
+<a href="https://hub.docker.com/repository/docker/l9otus/data550_final_image/general" class="uri">https://hub.docker.com/repository/docker/l9otus/data550_final_image/general</a></p>
+</div>
+<div id="how-to-build-the-docker-image" class="section level2">
+<h2>How to Build the Docker Image</h2>
+<pre class="bash"><code>docker build -t l9otus/data550_final_image .</code></pre>
+</div>
+<div id="how-to-run-the-docker-image" class="section level2">
+<h2>How to Run the Docker Image</h2>
+<pre class="bash"><code>docker run -v /&quot;$(pwd)/report&quot;:/project/report data550_final_image</code></pre>
+</div>
 <div id="how-to-generate-the-final-report" class="section level2">
 <h2>How to Generate the Final Report</h2>
-<p>Run each code file step by step:<br />
-</p>
-<ul>
-<li>Run the clean rule first.</li>
-<li>Use code/00_clean_data.R to clean the data, store the outcome in
-output folder.</li>
-<li>Use code/01_make_table.R to create the table, store the outcome in
-output folder.</li>
-<li>Use code/02_make_boxplot.R to create two boxplots, store the outcome
-in output folder.</li>
-<li>Use code/03_render_report.R to render the iris_report.Rmd and
-produce a html report.</li>
-</ul>
-<p><br />
-</p>
-<p>Or, just run the following commands in terminal:</p>
-<pre class="bash"><code>make clean
-make install #restore the package environment for this project
-make iris_report.html</code></pre>
+<p>Run the following in terminal:</p>
+<pre class="bash"><code>make report/iris_report.html</code></pre>
 <p><br />
 If add/delete/update any package, run following code to synchronize the
 renv library and renv.lock:</p>

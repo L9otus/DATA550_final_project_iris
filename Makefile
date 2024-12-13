@@ -1,4 +1,4 @@
-# report-associated rules (run within Docker container)
+# Report-associated rules (run within Docker container)
 
 ## 00.clean the data
 data/data_clean.rds: data/iris.data code/00_clean_data.R
@@ -33,7 +33,7 @@ clean:
 
 	
 # Docker-associated rules (run on our local machine)
-PROJECTFILES = iris_report.Rmd code/00_celan_data.R code/01_make_table.R code/02_make_boxplot.R code/03_render_report.R Makefile
+PROJECTFILES = iris_report.Rmd code/00_clean_data.R code/01_make_table.R code/02_make_boxplot.R code/03_render_report.R Makefile
 RENVFILES = renv.lock renv/activate.R renv/settings.json
 
 
@@ -44,5 +44,5 @@ data550_final_image: Dockerfile $(PROJECTFILES) $(RENVFILES)
 
 
 # Rule to build the report automatically in our container
-report/report.html: data550_final_image
+report/iris_report.html: data550_final_image
 	docker run -v "/$$(pwd)/report":/project/report data550_final_image
