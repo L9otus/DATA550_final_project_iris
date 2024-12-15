@@ -352,8 +352,8 @@ display: none;
 </div>
 
 
-<div id="analysis-of-iris-dataset" class="section level1">
-<h1>Analysis of iris dataset</h1>
+<div id="analysis-of-iris-dataset---data-550-final-project" class="section level1">
+<h1>Analysis of Iris Dataset - DATA 550 Final Project</h1>
 </div>
 <div id="xiaohan-li" class="section level1">
 <h1>Xiaohan Li</h1>
@@ -377,12 +377,20 @@ three iris species.</p>
 │ ├── table.rds<br />
 │ ├── boxplot_sepal_length.png<br />
 │ ├── boxplot_sepal_width.png</p>
-<p>├── Makefile<br />
+<p>├── renv<br />
+│ ├── .gitignore<br />
+│ ├── activate.R<br />
+│ ├── settings.json<br />
+│ ├── library</p>
+<p>├── report<br />
+│ ├── iris_report.html</p>
+<p>├── renv.lock<br />
+├── Makefile<br />
 ├── Dockerfile<br />
 ├── README.md<br />
 ├── README.html<br />
 ├── iris_report.Rmd<br />
-├── iris_report.html</p>
+</p>
 </div>
 <div id="how-to-download-the-docker-image" class="section level2">
 <h2>How to Download the Docker Image</h2>
@@ -398,13 +406,13 @@ three iris species.</p>
 <h2>How to Run the Docker Image</h2>
 <pre class="bash"><code>make report/iris_report.html</code></pre>
 </div>
-<div id="all-steps-needed-to-generate-the-final-report" class="section level2">
-<h2>All Steps Needed to Generate the Final Report</h2>
-<p>Run following steps in terminal:</p>
+<div id="all-steps-needed-to-generate-the-report" class="section level2">
+<h2>ALL STEPS NEEDED TO GENERATE THE REPORT</h2>
+<p>Run the following in terminal:</p>
 <p>Step 1:</p>
 <pre class="bash"><code>git clone https://github.com/L9otus/DATA550_final_project_iris
 cd DATA550_final_project_iris</code></pre>
-<p>Step 2 (run one of the following):</p>
+<p>Step 2 (select one of the following):</p>
 <ul>
 <li>For Windows users:</li>
 </ul>
@@ -436,7 +444,7 @@ synchronize the renv library and renv.lock:</p>
 </ul>
 <p><br />
 The code file that creates the table: code/01_make_table.R<br />
-The code file that creates the figure: code/02_make_boxplot.R</p>
+The code file that creates the figures: code/02_make_boxplot.R</p>
 </div>
 </div>
 

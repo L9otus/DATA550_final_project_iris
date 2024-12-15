@@ -1,4 +1,4 @@
-# Analysis of iris dataset
+# Analysis of Iris Dataset - DATA 550 Final Project
 # Xiaohan Li
 
 ## Project Description
@@ -24,13 +24,22 @@ using data visualization to explore the relationships between variables and thre
 │ ├── boxplot_sepal_length.png \
 │ ├── boxplot_sepal_width.png
 
+├── renv \
+│ ├── .gitignore \
+│ ├── activate.R \
+│ ├── settings.json \
+│ ├── library
+
+├── report \
+│ ├── iris_report.html
+
+
+├── renv.lock \
 ├── Makefile \
 ├── Dockerfile \
 ├── README.md \
 ├── README.html \
 ├── iris_report.Rmd \
-├── iris_report.html
-
 
 
 
@@ -54,8 +63,8 @@ make report/iris_report.html
 ```
 
 
-## All Steps Needed to Generate the Final Report
-Run following steps in terminal:
+## ALL STEPS NEEDED TO GENERATE THE REPORT
+Run the following in terminal:
 
 Step 1:
 ```bash
@@ -63,7 +72,7 @@ git clone https://github.com/L9otus/DATA550_final_project_iris
 cd DATA550_final_project_iris
 ```
 
-Step 2 (run one of the following): 
+Step 2 (select one of the following): 
  
  - For Windows users:
 ```bash
@@ -93,7 +102,6 @@ renv::snapshot()
 ```
 
 
-
 ## Contents of the Report
  - Description of the iris data set
  - Analysis objectives
@@ -101,7 +109,6 @@ renv::snapshot()
  - Tabular analysis (table)
  - Graphical analysis (boxplots)
  
- 
  \
 The code file that creates the table: code/01_make_table.R \
-The code file that creates the figure: code/02_make_boxplot.R
+The code file that creates the figures: code/02_make_boxplot.R
