@@ -54,26 +54,45 @@ make report/iris_report.html
 ```
 
 
-## How to Generate the Final Report
-Run the following in terminal:
+## All Steps Needed to Generate the Final Report
+Run following steps in terminal:
+
+Step 1:
 ```bash
 git clone https://github.com/L9otus/DATA550_final_project_iris
 cd DATA550_final_project_iris
+```
+
+Step 2 (run one of the following): 
+ 
+ - For Windows users:
+```bash
 docker pull l9otus/data550_final_image
+```
+
+ - For Mac users: (Work on Apple M1 chip)
+```bash
+docker pull --platform linux/amd64 l9otus/data550_final_image
+```
+
+Step 3:
+```bash
 make clean
 make report/iris_report.html
 ```
 
+\
+Now you should be able to view `iris_report.html` in the `report` folder
 
 \
-If add/delete/update any package, run following code to synchronize the renv library and renv.lock:
+Tips:
+
+If add/delete/update any package, run following in console to synchronize the renv library and renv.lock:
 ```r
 renv::snapshot()
 ```
 
-\
-The code file that creates the table: code/01_make_table.R \
-The code file that creates the figure: code/02_make_boxplot.R
+
 
 ## Contents of the Report
  - Description of the iris data set
@@ -81,3 +100,8 @@ The code file that creates the figure: code/02_make_boxplot.R
  - Read in Data
  - Tabular analysis (table)
  - Graphical analysis (boxplots)
+ 
+ 
+ \
+The code file that creates the table: code/01_make_table.R \
+The code file that creates the figure: code/02_make_boxplot.R

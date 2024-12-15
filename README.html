@@ -396,19 +396,34 @@ three iris species.</p>
 </div>
 <div id="how-to-run-the-docker-image" class="section level2">
 <h2>How to Run the Docker Image</h2>
-<pre class="bash"><code>docker run -v /&quot;$(pwd)/report&quot;:/project/report data550_final_image</code></pre>
-</div>
-<div id="how-to-generate-the-final-report" class="section level2">
-<h2>How to Generate the Final Report</h2>
-<p>Run the following in terminal:</p>
 <pre class="bash"><code>make report/iris_report.html</code></pre>
+</div>
+<div id="all-steps-needed-to-generate-the-final-report" class="section level2">
+<h2>All Steps Needed to Generate the Final Report</h2>
+<p>Run following steps in terminal:</p>
+<p>Step 1:</p>
+<pre class="bash"><code>git clone https://github.com/L9otus/DATA550_final_project_iris
+cd DATA550_final_project_iris</code></pre>
+<p>Step 2 (run one of the following):</p>
+<ul>
+<li>For Windows users:</li>
+</ul>
+<pre class="bash"><code>docker pull l9otus/data550_final_image</code></pre>
+<ul>
+<li>For Mac users: (Work on Apple M1 chip)</li>
+</ul>
+<pre class="bash"><code>docker pull --platform linux/amd64 l9otus/data550_final_image</code></pre>
+<p>Step 3:</p>
+<pre class="bash"><code>make clean
+make report/iris_report.html</code></pre>
 <p><br />
-If add/delete/update any package, run following code to synchronize the
-renv library and renv.lock:</p>
+Now you should be able to view <code>iris_report.html</code> in the
+<code>report</code> folder</p>
+<p><br />
+Tips:</p>
+<p>If add/delete/update any package, run following in console to
+synchronize the renv library and renv.lock:</p>
 <pre class="r"><code>renv::snapshot()</code></pre>
-<p><br />
-The code file that creates the table: code/01_make_table.R<br />
-The code file that creates the figure: code/02_make_boxplot.R</p>
 </div>
 <div id="contents-of-the-report" class="section level2">
 <h2>Contents of the Report</h2>
@@ -419,6 +434,9 @@ The code file that creates the figure: code/02_make_boxplot.R</p>
 <li>Tabular analysis (table)</li>
 <li>Graphical analysis (boxplots)</li>
 </ul>
+<p><br />
+The code file that creates the table: code/01_make_table.R<br />
+The code file that creates the figure: code/02_make_boxplot.R</p>
 </div>
 </div>
 
