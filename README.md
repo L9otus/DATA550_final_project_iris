@@ -50,15 +50,20 @@ docker build -t l9otus/data550_final_image .
 
 ## How to Run the Docker Image
 ```bash
-docker run -v /"$(pwd)/report":/project/report data550_final_image
+make report/iris_report.html
 ```
 
 
 ## How to Generate the Final Report
 Run the following in terminal:
 ```bash
+git clone https://github.com/L9otus/DATA550_final_project_iris
+cd DATA550_final_project_iris
+docker pull l9otus/data550_final_image
+make clean
 make report/iris_report.html
 ```
+
 
 \
 If add/delete/update any package, run following code to synchronize the renv library and renv.lock:

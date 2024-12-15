@@ -28,6 +28,7 @@ clean:
 	rm -f output/* && \
 	rm -f data/*.rds && \
 	rm -f iris_report.html && \
+	rm -f report/* && \
 	rm -f .Rhistory
 	
 
@@ -39,10 +40,10 @@ RENVFILES = renv.lock renv/activate.R renv/settings.json
 
 # Rule to build image
 data550_final_image: Dockerfile $(PROJECTFILES) $(RENVFILES)
-	docker build -t data550_final_image .
+	docker build -t l9otus/data550_final_image .
 	touch $@
 
 
 # Rule to build the report automatically in our container
-report/iris_report.html: data550_final_image
-	docker run -v "/$$(pwd)/report":/project/report data550_final_image
+report/iris_report.html:
+	docker run -v "/$$(pwd)/report":/project/report l9otus/data550_final_image
